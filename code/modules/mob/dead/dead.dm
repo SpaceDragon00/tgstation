@@ -35,6 +35,7 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 /mob/dead/get_status_tab_items()
 	. = ..()
 	. += ""
+	. += "Game Mode: [SSticker.hide_mode ? "Secret" : "[GLOB.master_mode]"]"
 
 	if(SSticker.HasRoundStarted())
 		return
